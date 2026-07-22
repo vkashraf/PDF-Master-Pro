@@ -1,5 +1,7 @@
 package com.example.ui.home;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,6 +9,7 @@ import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.content.FileProvider;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
@@ -21,6 +24,7 @@ import com.example.ui.adapters.PdfDocumentAdapter;
 import com.example.ui.adapters.ToolGridAdapter;
 import com.example.ui.viewmodel.PdfViewModel;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -152,7 +156,19 @@ public class HomeFragment extends Fragment implements ToolGridAdapter.OnToolClic
 
     @Override
     public void onShareClick(PdfDocumentEntity entity) {
-        // Handle share intent
+        if (entity == null || entity.getFilePath() == null) return;
+        File file = new File(entity.getFilePath());
+        if (!file.exists()) return;
+        try {
+            Uri uri = FileProvider.getUriForFile(requireContext(), requireContext().getPackageName() + ".provider", file);
+            Intent shareIntent = new Intent(Intent.ACTION_SEND);
+            shareIntent.setType("application/pdf");
+            shareIntent.putExtra(Intent.EXTRA_STREAM, uri);
+            shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            startActivity(Intent.createChooser(shareIntent, "Share PDF"));
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override

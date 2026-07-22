@@ -21,10 +21,19 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Page 1 / 1"
+            android:text="Page 1 of 1"
             android:textColor="@color/text_primary_dark"
             android:textSize="14sp"
             android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/btn_capture_page"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/module_reader"
+            android:src="@drawable/ic_camera" />
 
         <ImageButton
             android:id="@+id/btn_night_mode"
@@ -37,16 +46,26 @@
     </LinearLayout>
 
     <!-- Main Page Image Container -->
-    <ImageView
+    <com.example.ui.views.ZoomableImageView
         android:id="@+id/iv_pdf_page_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/module_reader"
-        android:scaleType="fitCenter"
         app:layout_constraintBottom_toTopOf="@id/ll_bottom_controls"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/ll_reader_bar" />
+
+    <!-- Loading Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_pdf_page_view"
+        app:layout_constraintEnd_toEndOf="@id/iv_pdf_page_view"
+        app:layout_constraintStart_toStartOf="@id/iv_pdf_page_view"
+        app:layout_constraintTop_toTopOf="@id/iv_pdf_page_view" />
 
     <!-- Bottom Page Slider Controls -->
     <LinearLayout
