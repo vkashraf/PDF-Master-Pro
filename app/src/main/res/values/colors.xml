@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- PDF Master Pro Color Palette (Material 3 Dark Slate & PDF Coral Theme) -->
+    <color name="primary">#FF3B30</color>
+    <color name="on_primary">#FFFFFF</color>
+    <color name="primary_container">#3D1418</color>
+    <color name="on_primary_container">#FFDAD6</color>
+
+    <color name="secondary">#8C9EFF</color>
+    <color name="on_secondary">#00105C</color>
+    <color name="secondary_container">#243063</color>
+    <color name="on_secondary_container">#DDE1FF</color>
+
+    <color name="tertiary">#FFB74D</color>
+    <color name="on_tertiary">#452B00</color>
+
+    <!-- Surface and Background (Dark Glassmorphic Theme) -->
+    <color name="bg_dark">#0F0F14</color>
+    <color name="surface_dark">#181820</color>
+    <color name="surface_variant_dark">#22222E</color>
+    <color name="card_bg_dark">#1F1F2B</color>
+    <color name="card_stroke_dark">#2F2F42</color>
+
+    <color name="text_primary_dark">#F2F2F7</color>
+    <color name="text_secondary_dark">#A1A1B5</color>
+    <color name="text_tertiary_dark">#6E6E82</color>
+
+    <!-- Accents & Functional Colors -->
+    <color name="accent_red">#FF3B30</color>
+    <color name="accent_blue">#007AFF</color>
+    <color name="accent_green">#34C759</color>
+    <color name="accent_gold">#FFD700</color>
+    <color name="accent_purple">#AF52DE</color>
+    <color name="accent_orange">#FF9500</color>
+    <color name="accent_teal">#30B0C7</color>
+
+    <color name="glass_white_10">#1AFFFFFF</color>
+    <color name="glass_white_05">#0DFFFFFF</color>
+    <color name="divider_color">#2C2C3A</color>
+
+    <color name="shimmer_color">#2A2A38</color>
+</resources>

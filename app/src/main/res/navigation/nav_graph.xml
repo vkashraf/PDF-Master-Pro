@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.ui.home.HomeFragment"
+        android:label="@string/nav_home" />
+
+    <fragment
+        android:id="@+id/nav_recents"
+        android:name="com.example.ui.recents.RecentFilesFragment"
+        android:label="@string/nav_recents" />
+
+    <fragment
+        android:id="@+id/nav_favorites"
+        android:name="com.example.ui.favorites.FavoritesFragment"
+        android:label="@string/nav_favorites" />
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.ui.settings.SettingsFragment"
+        android:label="@string/nav_settings" />
+
+    <fragment
+        android:id="@+id/nav_pro"
+        android:name="com.example.ui.premium.PremiumFragment"
+        android:label="@string/nav_pro" />
+
+    <fragment
+        android:id="@+id/nav_reader"
+        android:name="com.example.ui.reader.PdfReaderFragment"
+        android:label="@string/module_reader" />
+
+    <fragment
+        android:id="@+id/nav_img_to_pdf"
+        android:name="com.example.ui.imagetopdf.ImageToPdfFragment"
+        android:label="@string/module_img_to_pdf" />
+
+    <fragment
+        android:id="@+id/nav_merge"
+        android:name="com.example.ui.merge.MergePdfFragment"
+        android:label="@string/module_merge" />
+
+    <fragment
+        android:id="@+id/nav_split"
+        android:name="com.example.ui.split.SplitPdfFragment"
+        android:label="@string/module_split" />
+
+    <fragment
+        android:id="@+id/nav_compress"
+        android:name="com.example.ui.compress.CompressPdfFragment"
+        android:label="@string/module_compress" />
+
+    <fragment
+        android:id="@+id/nav_rotate"
+        android:name="com.example.ui.rotate.RotatePdfFragment"
+        android:label="@string/module_rotate" />
+
+    <fragment
+        android:id="@+id/nav_lock"
+        android:name="com.example.ui.lock.LockPdfFragment"
+        android:label="@string/module_lock" />
+
+    <fragment
+        android:id="@+id/nav_unlock"
+        android:name="com.example.ui.unlock.UnlockPdfFragment"
+        android:label="@string/module_unlock" />
+
+    <fragment
+        android:id="@+id/nav_watermark"
+        android:name="com.example.ui.watermark.WatermarkPdfFragment"
+        android:label="@string/module_watermark" />
+
+    <fragment
+        android:id="@+id/nav_extract"
+        android:name="com.example.ui.extract.ExtractPagesFragment"
+        android:label="@string/module_extract" />
+
+    <fragment
+        android:id="@+id/nav_reorder"
+        android:name="com.example.ui.reorder.ReorderPagesFragment"
+        android:label="@string/module_reorder" />
+
+    <fragment
+        android:id="@+id/nav_sign"
+        android:name="com.example.ui.sign.SignPdfFragment"
+        android:label="@string/module_sign" />
+
+    <fragment
+        android:id="@+id/nav_scanner"
+        android:name="com.example.ui.scanner.DocumentScannerFragment"
+        android:label="@string/module_scanner" />
+
+</navigation>

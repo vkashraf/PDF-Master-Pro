@@ -1,0 +1,6 @@
+{
+  "name": "PDF Master Pro",
+  "description": "Everything You Need for PDF. Offline.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
